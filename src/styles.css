@@ -1,0 +1,30 @@
+body {
+    background-color: antiquewhite;
+    margin: 0;
+}
+
+#content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#imagebox {
+    position: relative;
+}
+
+img#mainimage {
+    width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
+}
+
+h1 {
+    position: absolute;
+    margin: 0;
+    color: white;
+    font-size: 3rem;
+    bottom: 15px;
+    left: 15px;
+}
+
