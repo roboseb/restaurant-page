@@ -3,11 +3,14 @@ export {displayMenu};
 function displayMenu() {
     const content = document.getElementById('content');
     content.innerText = null;
-    console.log('switchwed')
+
+    const mainBox = document.createElement('div');
+    mainBox.id = 'mainbox';
+    content.appendChild(mainBox);
 
     const imageBox = document.createElement('div');
     imageBox.id = 'imagebox';
-    content.appendChild(imageBox);
+    mainBox.appendChild(imageBox);
 
     const mainHeading = document.createElement('h1');
     mainHeading.id = 'mainheading';
@@ -19,9 +22,42 @@ function displayMenu() {
     mainImage.src = '../src/thecave.jpg';
     imageBox.appendChild(mainImage);
 
-    const intro = document.createElement('p');
-    intro.id = 'intro';
-    intro.innerText = 'The cave has been reviewed as, "The epitomy of fine dining in our fair city", "A cut above the rest, and by a mile", and, "A preservation of a more elegant, and simultaneously more primal era in our beautiful history."' +
-                        "\n\n Man was once relegated to fuel himself within caves of mother nature's design. Now, man has taken control of the world around him and shaped it as he saw fit, in this case returning us to the beauty of eons ago.";
-    content.appendChild(intro);
+    addMenuItem('HANGMEAT', 'A breakfast classic at The Cave. Men have long atoned for their crimes through hanging, and lesser animals should be no different.',
+                '../src/hangmeat.jpg', 15);
+
+    addMenuItem('ASHMEAT', "With this dish we've brought the meat closer to the fire, so that you can be closer to the flavour.",
+                '../src/ashmeat.jpg', 12);
+
+    addMenuItem('ROCKMEAT', "Like champagne, popsicles, and chocolate chip cookies, mankind invented this entree by accident four million years ago.",
+                '../src/rockmeat.jpg', 20);
+    
+    addMenuItem('SPINMEAT', "Not to be confused with the meatspin, an aged meat with an acquired taste.",
+                '../src/spinmeat.jpg', 18);
+                
+    addMenuItem('THE GATHERER', "A platter of freshly picked wild berries. Lightly tossed in a handwoven basket and served fresh.",
+                '../src/berries.jpg', 9);
+}
+
+function addMenuItem(name, description, image, price) {
+    const mainBox = document.getElementById('mainbox');
+
+    const menuCard = document.createElement('div');
+    menuCard.classList.add('menucard');
+    mainBox.appendChild(menuCard);
+
+    const itemName = document.createElement('h2');
+    itemName.innerText = name;
+    menuCard.appendChild(itemName);
+
+    const itemDesc = document.createElement('p');
+    itemDesc.innerText = description;
+    menuCard.appendChild(itemDesc);
+
+    const photo = document.createElement('img');
+    photo.src = image;
+    menuCard.appendChild(photo);
+
+    const itemPrice = document.createElement('h3');
+    itemPrice.innerText = `${price} shells`;
+    menuCard.appendChild(itemPrice);
 }
