@@ -1,6 +1,7 @@
 body {
     background-color: antiquewhite;
     margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 #content {
@@ -13,6 +14,12 @@ body {
     width: max(50vw, 750px);
     display: flex;
     flex-direction: column;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+#mainbox>h2 {
+    margin: 15px 0px 0px 0px;
 }
 
 #imagebox {
@@ -32,9 +39,25 @@ h1 {
     left: 15px;
 }
 
+#gallery {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 20px;
+    align-items: center;
+    justify-items: start;
+    justify-content: center;
+}
+
+#gallery>img {
+    height: 100px;
+    width: auto;
+    transition: all 1s;
+    box-shadow: 0px 7px 7px grey;
+}
+
 .menucard {
     background-color: #4A6C6F;
-    margin: 15px;
+    margin: 15px 0px 15px 0px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -45,6 +68,10 @@ h1 {
 .menucard>h2, .menucard>h3, .menucard>p {
     margin: 10px 15px 10px 15px;
     width: 50%;
+}
+
+.menucard>h2 {
+    margin-top: 20px;
 }
 
 .menucard>img {
@@ -79,6 +106,36 @@ h1 {
     filter: drop-shadow(-5px 5px 7px #23474b)
 }
 
-.itemdesc {
+#italics {
+    font-style: italic;
+}
 
+button {
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 100%;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    bottom: 0;
+    border-style: none;
+    filter: drop-shadow(0px 5px 5px grey);
+    transition: bottom 0.5s, left 0.5s, right 0.5s, background-color 0.5s, color 0.5s;
+}
+
+button:hover {
+    background-color: #23474b;
+    color: white;
+}
+
+#buttonbox {
+    filter: opacity(0.5);
+    display: block;
+    position: fixed;
+    bottom: 15px;
+    width: 70px;
+    height: 70px;
+}
+
+#buttonbox:hover {
+    filter: opacity(1);
 }
