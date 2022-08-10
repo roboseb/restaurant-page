@@ -42,7 +42,7 @@ function init() {
     //Animate gallery images, growing selected and shrinking others.
     for (let i = 1; i < 9; i++) {
         const image = document.createElement('img');
-        image.src = require(`../dist/images/gallery/${i}.jpg`);
+        image.src = require(`../dist/images/gallery${i}.jpg`);
         image.id = `gallery${i}`
         gallery.appendChild(image);
         image.addEventListener('mouseover', () => {
