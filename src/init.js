@@ -24,7 +24,7 @@ function init() {
 
     const mainImage = document.createElement('img');
     mainImage.id = 'mainimage';
-    mainImage.src = '../src/thecave.jpg';
+    mainImage.src = '../dist/images/thecave.jpg';
     imageBox.appendChild(mainImage);
 
     const intro = document.createElement('p');
@@ -40,7 +40,7 @@ function init() {
     //Animate gallery images, growing selected and shrinking others.
     for (let i = 1; i < 9; i++) {
         const image = document.createElement('img');
-        image.src = `../src/gallery${i}.jpg`;
+        image.src = `../dist/images/gallery${i}.jpg`;
         image.id = `gallery${i}`
         gallery.appendChild(image);
         image.addEventListener('mouseover', () => {
