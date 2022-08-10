@@ -1,5 +1,12 @@
 export {displayMenu, addMenuItem, addHeader};
 
+import cave from '../dist/images/thecave.jpg';
+import hangmeat from '../dist/images/hangmeat.jpg';
+import ashmeat from '../dist/images/ashmeat.jpg';
+import rockmeat from '../dist/images/rockmeat.jpg';
+import spinmeat from '../dist/images/spinmeat.jpg';
+import berries from '../dist/images/berries.jpg';
+
 function displayMenu() {
     const mainBox = document.getElementById('mainbox');
     mainBox.innerText = null;
@@ -15,28 +22,28 @@ function displayMenu() {
 
     const mainImage = document.createElement('img');
     mainImage.id = 'mainimage';
-    mainImage.src = '../dist/images/thecave.jpg';
+    mainImage.src = cave;
     imageBox.appendChild(mainImage);
 
     addHeader('Breakfast');
     addMenuItem('HANGMEAT', 'A breakfast classic at The Cave. Men have long atoned for their crimes through hanging, and lesser animals should be no different.',
-                '../dist/images/hangmeat.jpg', 15);
+                hangmeat, 15);
 
     addHeader('Lunch');
     addMenuItem('ASHMEAT', "With this dish we've brought the meat closer to the fire, so that you can be closer to the flavour.",
-                '../dist/images/ashmeat.jpg', 13);
+                ashmeat, 13);
 
     
     addMenuItem('ROCKMEAT', "Like champagne, popsicles, and chocolate chip cookies, mankind invented this entree by accident four million years ago.",
-                '../dist/images/rockmeat.jpg', 20);
+                rockmeat, 20);
     
     addHeader('Dinner');
     addMenuItem('SPINMEAT', "Not to be confused with the meatspin, an aged meat with an acquired taste.",
-                '../dist/images/spinmeat.jpg', 17);
+                spinmeat, 17);
                 
     addHeader('Vegan');
     addMenuItem('THE GATHERER', "A platter of freshly picked wild berries. Lightly tossed in a handwoven basket and served fresh.",
-                '../dist/images/berries.jpg', 9);
+                berries, 9);
     
     addHeader('Shells?');
     const shellText = document.createElement('p');

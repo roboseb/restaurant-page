@@ -2,6 +2,9 @@ import {addMenuItem} from './menu.js';
 import { addHeader } from './menu.js';
 export {displayContacts}
 
+import cave from '../dist/images/thecave.jpg';
+import caceres from '../dist/images/caceres.jpg';
+
 function displayContacts() {
     const mainBox = document.getElementById('mainbox');
     mainBox.innerText = null;
@@ -17,13 +20,13 @@ function displayContacts() {
 
     const mainImage = document.createElement('img');
     mainImage.id = 'mainimage';
-    mainImage.src = '../dist/images/thecave.jpg';
+    mainImage.src = cave;
     imageBox.appendChild(mainImage);
 
 
     addHeader('Locations');
     addMenuItem('Cáceres, Spain', 'Located just off calle Nunez, in the vibrant heart of the city. Parking available adjacent to the penitentiary.',
-                '../dist/images/caceres.jpg');
+                caceres);
     addMenuItem('Hours', 'Monday-Sunday during daylight hours. Closed during famine season.');
 
     addHeader('Contacts');
